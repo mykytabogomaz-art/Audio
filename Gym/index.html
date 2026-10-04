@@ -1,1 +1,257 @@
 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудіювання: Спортзал</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f5f0; 
+            color: #4a4a4a; 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5px 10px;
+            line-height: 1.2;
+            font-size: 14px;
+        }
+        h1 {
+            color: #4a4a4a; 
+            text-align: center;
+            font-size: 1.2em;
+            margin: 5px 0 10px 0;
+        }
+        .player-container {
+            text-align: center;
+            margin: 0 0 10px 0;
+            background: #ffffff;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        audio {
+            width: 100%;
+            max-width: 600px; 
+            height: 35px;
+            outline: none;
+        }
+        .question-block {
+            background: #ffffff;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .question-text {
+            font-size: 1em;
+            font-weight: bold;
+            color: #6a8ba3; 
+            margin-bottom: 6px;
+        }
+        
+        .sentence-builder {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: center;
+        }
+        select {
+            padding: 4px 6px;
+            font-size: 0.95em;
+            border: 1px solid #cccccc; 
+            border-radius: 4px;
+            background-color: #fff;
+            color: #4a4a4a;
+            cursor: pointer;
+            outline: none;
+        }
+        select.correct {
+            border-color: #8db58f; 
+            background-color: #f0f7f1;
+        }
+        select.incorrect {
+            border-color: #cf8884; 
+            background-color: #fcf2f2;
+        }
+        .check-btn {
+            display: block;
+            width: 160px;
+            margin: 10px auto;
+            padding: 8px;
+            font-size: 1em;
+            background-color: #6a8ba3; 
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+        .check-btn:hover {
+            background-color: #55758c; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Аудіювання: Спортзал</h1>
+
+    <div class="player-container">
+        <audio controls>
+            <source src="1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="question-block">
+        <div class="question-text">1. Про що ти слухав текст?</div>
+        <div class="sentence-builder">
+            <select data-correct="Я слухав">
+                <option value="">(обери)</option>
+                <option value="Я слухав">Я слухав</option>
+                <option value="Я читав">Я читав</option>
+                <option value="Я дивився">Я дивився</option>
+            </select>
+            <select data-correct="текст">
+                <option value="">(обери)</option>
+                <option value="пісню">пісню</option>
+                <option value="текст">текст</option>
+                <option value="казку">казку</option>
+            </select>
+            <select data-correct="про">
+                <option value="">(обери)</option>
+                <option value="від">від</option>
+                <option value="для">для</option>
+                <option value="про">про</option>
+            </select>
+            <select data-correct="спортзал.">
+                <option value="">(обери)</option>
+                <option value="спортзал.">спортзал.</option>
+                <option value="школу.">школу.</option>
+                <option value="магазин.">магазин.</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-text">2. Який одяг потрібно одягати у спортзал?</div>
+        <div class="sentence-builder">
+            <select data-correct="Потрібно одягати">
+                <option value="">(обери)</option>
+                <option value="Потрібно одягати">Потрібно одягати</option>
+                <option value="Не треба одягати">Не треба одягати</option>
+                <option value="Можна знімати">Можна знімати</option>
+            </select>
+            <select data-correct="зручний">
+                <option value="">(обери)</option>
+                <option value="тісний">тісний</option>
+                <option value="зимовий">зимовий</option>
+                <option value="зручний">зручний</option>
+            </select>
+            <select data-correct="спортивний">
+                <option value="">(обери)</option>
+                <option value="спортивний">спортивний</option>
+                <option value="шкільний">шкільний</option>
+                <option value="домашній">домашній</option>
+            </select>
+            <select data-correct="одяг.">
+                <option value="">(обери)</option>
+                <option value="светр.">светр.</option>
+                <option value="одяг.">одяг.</option>
+                <option value="плащ.">плащ.</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-text">3. Що людина робить на велотренажері?</div>
+        <div class="sentence-builder">
+            <select data-correct="На велотренажері">
+                <option value="">(обери)</option>
+                <option value="На вулиці">На вулиці</option>
+                <option value="На велотренажері">На велотренажері</option>
+                <option value="На дивані">На дивані</option>
+            </select>
+            <select data-correct="людина">
+                <option value="">(обери)</option>
+                <option value="людина">людина</option>
+                <option value="собака">собака</option>
+                <option value="машина">машина</option>
+            </select>
+            <select data-correct="крутить">
+                <option value="">(обери)</option>
+                <option value="крутить">крутить</option>
+                <option value="ламає">ламає</option>
+                <option value="ховає">ховає</option>
+            </select>
+            <select data-correct="педалі.">
+                <option value="">(обери)</option>
+                <option value="педалі.">педалі.</option>
+                <option value="колеса.">колеса.</option>
+                <option value="кермо.">кермо.</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-text">4. Що робить людина на силових тренажерах?</div>
+        <div class="sentence-builder">
+            <select data-correct="На силових тренажерах">
+                <option value="">(обери)</option>
+                <option value="На силових тренажерах">На силових тренажерах</option>
+                <option value="На килимку">На килимку</option>
+                <option value="На кріслі">На кріслі</option>
+            </select>
+            <select data-correct="людина">
+                <option value="">(обери)</option>
+                <option value="людина">людина</option>
+                <option value="тренер">тренер</option>
+                <option value="робот">робот</option>
+            </select>
+            <select data-correct="піднімає">
+                <option value="">(обери)</option>
+                <option value="піднімає">піднімає</option>
+                <option value="кидає">кидає</option>
+                <option value="малює">малює</option>
+            </select>
+            <select data-correct="вагу.">
+                <option value="">(обери)</option>
+                <option value="вагу.">вагу.</option>
+                <option value="сумку.">сумку.</option>
+                <option value="гирю.">гирю.</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="check-btn" onclick="checkAnswers()">Перевірити</button>
+
+    <script>
+        function checkAnswers() {
+            const selects = document.querySelectorAll('select');
+            let allCorrect = true;
+
+            selects.forEach(select => {
+                const selectedValue = select.value;
+                const correctValue = select.getAttribute('data-correct');
+
+                if (selectedValue === "") {
+                    select.classList.remove('correct', 'incorrect');
+                    allCorrect = false;
+                } else if (selectedValue === correctValue) {
+                    select.classList.remove('incorrect');
+                    select.classList.add('correct');
+                } else {
+                    select.classList.remove('correct');
+                    select.classList.add('incorrect');
+                    allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                setTimeout(() => alert("Завдання виконано правильно."), 100);
+            }
+        }
+    </script>
+</body>
+</html>
