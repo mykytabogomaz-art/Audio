@@ -1,1 +1,261 @@
 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудіювання: Чому не можна битися</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f5f0; 
+            color: #4a4a4a; 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8px;
+            line-height: 1.2;
+        }
+        h1 {
+            color: #bd8e8e; 
+            text-align: center;
+            font-size: 1.3em;
+            margin: 8px 0;
+        }
+        .player-container {
+            text-align: center;
+            margin: 8px 0;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        audio {
+            width: 100%;
+            max-width: 600px; 
+            height: 35px;
+            outline: none;
+        }
+
+        .question-block {
+            background: #ffffff;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .question-text {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #6a8ba3; 
+            margin-bottom: 8px;
+        }
+        .sentence-builder {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+        select {
+            padding: 5px;
+            font-size: 0.95em;
+            border: 2px solid #a3b8c7; 
+            border-radius: 6px;
+            background-color: #fff;
+            color: #4a4a4a;
+            cursor: pointer;
+            outline: none;
+        }
+        select.correct {
+            border-color: #8db58f; 
+            background-color: #f0f7f1;
+        }
+        select.incorrect {
+            border-color: #cf8884; 
+            background-color: #fcf2f2;
+        }
+        .check-btn {
+            display: block;
+            width: 160px;
+            margin: 12px auto;
+            padding: 10px;
+            font-size: 1.05em;
+            background-color: #d19494; 
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+        .check-btn:hover {
+            background-color: #c28282; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Послухай текст та склади відповіді</h1>
+
+    <div class="player-container">
+        <!-- ЗАМІНІТЬ 'ВСТАВТЕ_ЛІНК_ТУТ.mp3' НА ВАШЕ ПОСИЛАННЯ -->
+        <audio controls>
+            <source src="1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Питання 1 -->
+    <div class="question-block">
+        <div class="question-text">1. Про що ти слухав текст?</div>
+        <div class="sentence-builder">
+            <select data-correct="Я слухав">
+                <option value="">(обери)</option>
+                <option value="Я слухав">Я слухав</option>
+                <option value="Я дивився">Я дивився</option>
+                <option value="Я малював">Я малював</option>
+            </select>
+            <select data-correct="текст">
+                <option value="">(обери)</option>
+                <option value="пісню">пісню</option>
+                <option value="текст">текст</option>
+                <option value="казку">казку</option>
+            </select>
+            <select data-correct="про те,">
+                <option value="">(обери)</option>
+                <option value="від того,">від того,</option>
+                <option value="для того,">для того,</option>
+                <option value="про те,">про те,</option>
+            </select>
+            <select data-correct="чому не можна битися.">
+                <option value="">(обери)</option>
+                <option value="чому не можна битися.">чому не можна битися.</option>
+                <option value="чому треба спати.">чому треба спати.</option>
+                <option value="чому треба їсти.">чому треба їсти.</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Питання 2 -->
+    <div class="question-block">
+        <div class="question-text">2. Чому заборонено битися та штовхатися?</div>
+        <div class="sentence-builder">
+            <select data-correct="Тому що">
+                <option value="">(обери)</option>
+                <option value="Тому що">Тому що</option>
+                <option value="Ніколи">Ніколи</option>
+                <option value="Завжди">Завжди</option>
+            </select>
+            <select data-correct="це завдає">
+                <option value="">(обери)</option>
+                <option value="це дарує">це дарує</option>
+                <option value="це завдає">це завдає</option>
+                <option value="це лікує">це лікує</option>
+            </select>
+            <select data-correct="фізичного болю">
+                <option value="">(обери)</option>
+                <option value="радості">радості</option>
+                <option value="фізичного болю">фізичного болю</option>
+                <option value="сміху">сміху</option>
+            </select>
+            <select data-correct="та травм.">
+                <option value="">(обери)</option>
+                <option value="та подарунків.">та подарунків.</option>
+                <option value="та цукерок.">та цукерок.</option>
+                <option value="та травм.">та травм.</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Питання 3 -->
+    <div class="question-block">
+        <div class="question-text">3. Як треба вирішувати проблему, якщо щось не подобається?</div>
+        <div class="sentence-builder">
+            <select data-correct="Треба">
+                <option value="">(обери)</option>
+                <option value="Не можна">Не можна</option>
+                <option value="Треба">Треба</option>
+                <option value="Не треба">Не треба</option>
+            </select>
+            <select data-correct="говорити">
+                <option value="">(обери)</option>
+                <option value="кричати">кричати</option>
+                <option value="говорити">говорити</option>
+                <option value="битися">битися</option>
+            </select>
+            <select data-correct="про це">
+                <option value="">(обери)</option>
+                <option value="про погоду">про погоду</option>
+                <option value="про це">про це</option>
+                <option value="про мультики">про мультики</option>
+            </select>
+            <select data-correct="словами.">
+                <option value="">(обери)</option>
+                <option value="руками.">руками.</option>
+                <option value="словами.">словами.</option>
+                <option value="ногами.">ногами.</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Питання 4 -->
+    <div class="question-block">
+        <div class="question-text">4. Яка поведінка є правильною і безпечною?</div>
+        <div class="sentence-builder">
+            <select data-correct="Правильно">
+                <option value="">(обери)</option>
+                <option value="Неправильно">Неправильно</option>
+                <option value="Погано">Погано</option>
+                <option value="Правильно">Правильно</option>
+            </select>
+            <select data-correct="завжди">
+                <option value="">(обери)</option>
+                <option value="завжди">завжди</option>
+                <option value="ніколи">ніколи</option>
+                <option value="інколи">інколи</option>
+            </select>
+            <select data-correct="тримати руки">
+                <option value="">(обери)</option>
+                <option value="ховати руки">ховати руки</option>
+                <option value="піднімати руки">піднімати руки</option>
+                <option value="тримати руки">тримати руки</option>
+            </select>
+            <select data-correct="при собі.">
+                <option value="">(обери)</option>
+                <option value="на голові.">на голові.</option>
+                <option value="в кишенях.">в кишенях.</option>
+                <option value="при собі.">при собі.</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="check-btn" onclick="checkAnswers()">Перевірити</button>
+
+    <script>
+        function checkAnswers() {
+            const selects = document.querySelectorAll('select');
+            let allCorrect = true;
+
+            selects.forEach(select => {
+                const selectedValue = select.value;
+                const correctValue = select.getAttribute('data-correct');
+
+                if (selectedValue === "") {
+                    select.classList.remove('correct', 'incorrect');
+                    allCorrect = false;
+                } else if (selectedValue === correctValue) {
+                    select.classList.remove('incorrect');
+                    select.classList.add('correct');
+                } else {
+                    select.classList.remove('correct');
+                    select.classList.add('incorrect');
+                    allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                setTimeout(() => alert("Завдання виконано правильно."), 100);
+            }
+        }
+    </script>
+</body>
+</html>
